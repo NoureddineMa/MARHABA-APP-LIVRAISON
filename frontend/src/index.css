@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: white;
+    
+    font-family: 'Poppins', sans-serif;
+}
+.logo {
+    width: 100px;
+}
+.text-perso {
+    font-size: 9px;
+}
+span {
+    color: blueviolet;
+}
+.marhaba {
+    color:#FA8521;
+}
+.navbar {
+    background-color: blueviolet;
+}
+.started {
+    background-color:#FA8521;
+}
+.User {
+    color: #FA8521;
+}
+.Login{
+    background-color: #FA8521;
+}
+.register {
+    color: white;
+}
+.msgError {
+    display: block;
+font-size: 10px;
+margin: 10px 0px;
+color: red;
+}
+
+.effect-hover:hover {
+    border-bottom: #FA8521 2px solid;
+    transition:ease-in-out;
+}
