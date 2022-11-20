@@ -13,6 +13,10 @@ app.use(cors({origin:true,credentials:true}));
 app.use(express.urlencoded ({extended: false}))
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send('running from docker container')
+})
+
 // authentification route:
 app.use('/api/auth', router)
 // client route : 
