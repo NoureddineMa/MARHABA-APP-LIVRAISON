@@ -31,3 +31,4 @@ app.listen(PORT, () => {
 })
 // connect base données:
 require('./config/dbConfig').connect();
+require('./config/setRoles').setDefaultRoles()

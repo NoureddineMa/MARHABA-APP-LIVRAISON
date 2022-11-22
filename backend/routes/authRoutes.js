@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 
-const { Login , Register , ForgetPassword , ResetPassword , emailVerification  } = require('../controllers/authcontroller')
+const { Login , Register , ForgetPassword , ResetPassword , emailVerification  } = require('../controllers/authController')
 
 router.post('/login',Login)
 router.post('/register',Register)
