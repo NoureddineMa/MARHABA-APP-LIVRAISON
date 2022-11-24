@@ -1,18 +1,17 @@
 const Roles = require("../models/rolesModel")
 
-const roles = ['livreur', 'manager', 'client']
+const roles = ['manager', 'client', 'livreur']
 
-exports.setDefaultRoles = () => {
+exports.setDefaultRoles = async () => {
     try {
-        roles.forEach((role) => {
-            const saveRole = new Roles({ role })
-            saveRole.save()
-        })
+        const count = await Roles.countDocuments()
+        if(count === 0) {
+            roles.forEach( async (role) => {
+                const saveRole = new Roles({ role })
+                await saveRole.save()
+            })
+        }
     } catch(err) {
-        next({
-            error: true,
-            status: 400, 
-            message: "something went wrong " + err
-        })
+           console.log(err);
     }
 }

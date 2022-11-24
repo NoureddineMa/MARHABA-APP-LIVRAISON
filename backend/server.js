@@ -9,13 +9,13 @@ const  managerRouter = require('./routes/ManagerRouter')
 
 
 const app = express();
-app.use(cors({origin:true,credentials:true}));
-app.use(express.urlencoded ({extended: false}))
+app.use(cors({origin:true,credentials:true}))
 app.use(express.json())
+app.use(express.urlencoded ({extended: true}))
 
-app.get('/', (req, res) => {
-    res.send('running from docker container')
-})
+// app.get('/', (req, res) => {
+//     res.send('running from docker container')
+// })
 
 // authentification route:
 app.use('/api/auth', router)
@@ -30,5 +30,8 @@ app.listen(PORT, () => {
     console.log(`server Started at port ${PORT}`);
 })
 // connect base données:
-require('./config/dbConfig').connect();
 require('./config/setRoles').setDefaultRoles()
+require('./config/dbConfig').connect();
+
+
+module.exports = app ;
