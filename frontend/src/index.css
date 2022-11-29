@@ -41,7 +41,6 @@ font-size: 10px;
 margin: 10px 0px;
 color: red;
 }
-
 .effect-hover:hover {
     border-bottom: #FA8521 2px solid;
     transition:ease-in-out;

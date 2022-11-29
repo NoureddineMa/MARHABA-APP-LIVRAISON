@@ -8,6 +8,8 @@ import { showMessage } from './utiles/showMessage';
 
 
 
+
+
 const  Login = () =>  {
 
 
@@ -57,8 +59,11 @@ const  Login = () =>  {
             
       }
     return (
+       
         <div 
-        className='bg-gray-200  px-20 py-8  shadow-xl  rounded-2xl border-2  animate__animated animate__zoomIn    border-gray-200 flex flex-col place-items-center'>
+
+        data-testid ="Login"
+        className='bg-gray-200 rendred  px-20 py-8  shadow-xl  rounded-2xl border-2  animate__animated animate__zoomIn    border-gray-200 flex flex-col place-items-center'>
 
         <img
         src={image} 
@@ -146,4 +151,5 @@ const  Login = () =>  {
     )
 }
 
-    export default Login
+    export default Login;
+    

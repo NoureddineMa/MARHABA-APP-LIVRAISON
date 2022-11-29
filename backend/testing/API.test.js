@@ -6,7 +6,7 @@ describe("POST /api/auth/login" , () => {
         // should this test : "failed" --> status(400) should be status(200) bcs ipassed wrong data (not found in db)
     describe("given a email and password",  () => {
         // should save the email and password to the database
-            test("should respond with a 200 status code" , async () => {
+            test("should respond with a 400 status code" , async () => {
                 const response = await supertest(app).post("/api/auth/login")
                 .send({
                     email:"test",
